@@ -1,0 +1,170 @@
+{{#project}}
+<div class="col-md-12 project-{{id}}">
+  <h2>{{project_title}} (Project#: <a href="">{{project_number}})</a></h2>
+  <h3>Status: {{timesheet_status}}</h3>
+</div> <!-- /col-md-12 b -->
+{{#pay_periods as |pay_period|}}
+{{#if_eq pay_period.project_week_list.length 0}}
+{{else}}
+<div class="widget {{color_class}}">
+  <div class="col-md-12 b">
+    <h3>Pay Period: {{start_at}} - {{end_at}}</h3>
+  </div> <!-- /col-md-12 b -->
+  <form action="/timesheets/create" method="post" class = 'submission_period'>
+    <input type="hidden" name="authenticity_token" value="{{auth_token}}"/>
+    <input type="hidden" name="typeweeks[project_id]" value="{{../id}}">
+    <input type="hidden" name="typeweeks[pay_period_id]" value="{{id}}">
+    {{#project_week_list}}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="ibox">
+          <div class="ibox-title">
+            {{#if_eq ../../billing_type "org"}}
+            <div class="widget grey lighten-5 populate-crew week-{{id}}">
+              <div class='col-sm-3'>
+                {{#period_days}}
+                <div class="dows">
+                  <input {{#if_eq checked true}}checked {{/if_eq}} type="checkbox" class="input" name="{{day}}" id="dow-selection-{{day}}">
+                  <label class="cb-label" for="dow-selection-{{day}}">{{day}}</label>
+                </div>
+                {{/period_days}}
+              </div>
+              <div class='col-sm-2'>
+                <div class="form-group">
+                  <label for="work_start">Hours Per Day:</label>
+                  <input type="number" class="form-control week-{{id}}" id="hours">
+                </div>
+              </div>
+              <div class='col-sm-7 week-members-selection'>
+                {{#project_week_members}}
+                <span class="pwm-member-checkbox">
+                  <input checked type="checkbox" class="input" id="member-selection-{{id}}">
+                  <label class="cb-label" for="member-selection-{{id}}">{{pwm_name}}</label>
+                </span>
+                {{/project_week_members}}
+              </div>
+              <a href="" class="btn btn-primary btn-xs pull-right" disabled=true data-week-updater="{{id}}">Populate Crew Hours</a>
+            </div><!-- populate-crew -->
+            {{/if_eq}}
+          </div> <!-- /ibox-title -->
+          <div class="ibox-content week" data-week={{id}}>
+            <h4>Week {{inc @index}}  {{start_at}}</h4>
+            <table class="" style='width: 100%;'>
+              <tbody>
+                <tr>
+                  <td colspan=10>
+                    <table style='width: 100%;'>
+                      <thead>
+                        <th class='dowcol' style="width:20%;"> </th>
+                        {{#period_days}}
+                        <th class="dowcol"> {{day}} </th>
+                        {{/period_days}}
+                        <th class='dowcol'> </th>
+                        <th class='dowcol'> </th>
+                      </thead>
+                    </table>
+                  </td>
+                  {{#project_week_members}}
+                  <tr>
+                    <td colspan=10>
+                      <table style='width: 100%;' class="project-member member-{{id}}">
+                        <tr>
+                          <td colspan=10>
+                            <div>
+                              <strong>{{pwm_name}} </strong>
+                              <div class="btn btn-xs btn-success addrowbutton pull-right" data-target="service hours-row-{{uuid}}"><span class="fa fa-plus"></span></div>
+                              <div class="pull-right btn btn-xs btn-warning edit-lunch-button" data-target="lunch hours-row-{{uuid}}"><span class="fa fa-cutlery"></span></div>
+                            </div>
+                          </td>
+                        </tr>
+                        {{#each hours_logs}}
+                        <td class='dowcol'>
+                          <input class="form-control prev-submit hoursinput hours-type-  work-day-{{work_date}}"  name='typeweeks[project_week][{{../../id}}][project_week_member][{{../id}}][hours][{{work_date}}]' data-work-day={{day}} placeholder="0" type="text" value="{{hours}}"></input>
+                        </td>
+                        {{else}}
+                        {{#each initial_hours_types}}
+                        <tr class="{{#to_lower hours_type}} {{/to_lower}} hours-row-{{../uuid}} member-hours-{{../id}}">
+                          <td class='dowcol' style="width:20%;">
+                            <select class="dropstyle hours-type-select" name='typeweeks[project_week][{{../../id}}][project_week_member][{{../id}}][log_type]' >
+                              {{#../hours_log_types}}
+                              <option value="{{key}}" {{#if_eq val ../hours_type}}selected{{/if_eq}}>{{val}}</option>
+                              {{/../hours_log_types}}
+                            </select>
+                            <select class="hide dropstyle workers-comp-code-select" name='typeweeks[project_week][{{../../id}}][project_week_member][{{../id}}][workers_comp_code]' >
+                              {{#../../../../workers_comp_codes}}
+                              <option value="{{id}}">{{code}} :: {{description}} - {{state}}</option>
+                              {{/../../../../workers_comp_codes}}
+                            </select>
+
+
+                          </td>
+
+                          {{#each ../../period_days}}
+                          <td class='dowcol'>
+                            <input class="form-control hoursinput hours-type-  work-day-{{work_date}}"  name='typeweeks[project_week][{{../../../id}}][project_week_member][{{../../id}}][hours][{{work_date}}]' data-work-day={{day}} placeholder="0" type="text" value="0"></input>
+                          </td>
+                          {{/each}}
+                          {{/each}}
+                          {{#if_eq hours_type 'Lunch'}}
+                          {{else}}
+                          <td class="rowtotal dowcol">
+                            <strong><span class='hours'>0</span> <span class='spanlabel'>hours</span></strong>
+                          </td>
+                          {{/if_eq}}
+
+                          {{#if_eq hours_type 'Lunch'}}
+                          <td class='dowcol'> </td>
+                          {{else}}
+                          <td class='dowcol'>
+                            <div class="btn btn-sm btn-danger remove-row-button"><span class='fa fa-trash'></span></div>
+                          </td>
+                          {{/if_eq}}
+                        </tr>
+                        {{/each}}
+                      </table>
+                    </td>
+                  </tr>
+                  {{#if_eq ../../../billing_type "individual"}}
+                  <tr>
+                    <td colspan=10>
+                      <div class="row">
+                        <div class="col-md-4 margin-bottom">
+                          <label>Notable achievements</label>
+                          <textarea name = "hours_submission[member_progress_report[achievements]]" class="form-control" rows="4" cols="50" placeholder=" Over the last two weeks, I was able to...  ">
+                          </textarea>
+                        </div>
+                        <div class="col-md-4 margin-bottom">
+                          <label>Goals (next two weeks)</label>
+                          <textarea name = "hours_submission[member_progress_report[goals]]" class="form-control" rows="4" cols="50" placeholder="Over the next two weeks, my goals are to">
+                          </textarea>
+                        </div>
+                        <div class="col-md-4 margin-bottom">
+                          <label>Did you encounter any challenges? How did you solve them?</label>
+                          <textarea name = "hours_submission[member_progress_report[challenges]]" class="form-control" rows="4" cols="50" placeholder="Some challenges I had were...">
+                          </textarea>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  {{/if_eq}}
+
+
+                  {{/project_week_members}}
+              </tbody>
+            </table>
+            <strong><span id="hours-total"></span>Service hours</strong>
+          </div> <!-- /ibox-content -->
+        </div> <!-- /ibox -->
+      </div> <!-- /col-md-12 -->
+    </div> <!-- /row  -->
+    {{/project_week_list}}
+    <div class="row">
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-primary" value="Submit">{{../submit_label}}</button>
+      </div> <!-- /col-md-12 -->
+    </div> <!-- /row -->
+  </form> <!--/form  -->
+</div> <!-- /widget -->
+{{/if_eq}}
+{{/pay_periods}}
+{{/project}}

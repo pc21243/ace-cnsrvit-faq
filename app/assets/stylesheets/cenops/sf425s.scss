@@ -1,0 +1,31 @@
+// Place all the styles related to the cenops/sf425s controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//= require base/tables.css
+//= require_self
+
+
+table.sf-data tr {
+  height: 20px;
+}
+
+table.sf-data td.title {
+  border-bottom: 2px solid rgb(103, 106, 108)
+}
+
+table.sf-data .value {
+  margin: 2px 15px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  width: 120px;
+  padding: 5px;
+  min-height: 30px;
+}
+
+table.sf-data {
+  margin: 20px auto;
+}
+
+table.sf-data td {
+  padding: 5px;
+}

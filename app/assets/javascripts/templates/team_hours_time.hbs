@@ -1,0 +1,87 @@
+{{#project_weeks}}
+<div class="week-entry"  data-project-week={{id}}>
+  <input type="hidden" name="team_hours_submissions[project_weeks][project_week_id" value={{id}} />
+  <div> <h4>Week Start - {{week_start}}</h4> </div>
+  <div Class="container-fluid well">
+    <table class="table col-md-6">
+      <tr class="col-md-6">
+        <td>
+          <table>
+            <tr> <td colspan="2"> <div class="label label-default">Sunday</div> </td> </tr>
+            <tr>
+              <td class="col-md-6"> <span id="day1">{{week_start}} </span> </td>
+              <td> <input name="team_hours_submissions[project_weeks][{{id}}][hours_logs][sun]" /> </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="col-md-6">
+        <td>
+          <table>
+            <tr> <td colspan="2"> <div class="label label-default">Monday</div> </td> </tr>
+            <tr>
+              <td class="col-md-6"> <span id="day2">{{mon}} </span> </td>
+              <td> <input name="team_hours_submissions[project_weeks][{{id}}][hours_logs][mon]" /> </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="col-md-6">
+        <td>
+          <table>
+            <tr> <td colspan="2"> <div class="label label-default">Tuesday</div> </td> </tr>
+            <tr>
+              <td class="col-md-6"> <span id="day3">{{tue}} </span> </td>
+              <td> <input name="team_hours_submissions[project_weeks][{{id}}][hours_logs][tue]" /> </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="col-md-6">
+        <td>
+          <table>
+            <tr> <td colspan="2"> <div class="label label-default">Wednesday</div> </td> </tr>
+            <tr>
+              <td class="col-md-6"> <span id="day4">{{wed}} </span> </td>
+              <td> <input name="team_hours_submissions[project_weeks][{{id}}][hours_logs][wed]" /> </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="col-md-6">
+        <td>
+          <table>
+            <tr> <td colspan="2"> <div class="label label-default">Thursday</div> </td> </tr>
+            <tr>
+              <td class="col-md-6"> <span id="day5">{{thu}} </span> </td>
+              <td> <input name="team_hours_submissions[project_weeks][{{id}}][hours_logs][thu]" /> </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="col-md-6">
+        <td>
+          <table>
+            <tr> <td colspan="2"> <div class="label label-default">Friday</div> </td> </tr>
+            <tr>
+              <td class="col-md-6"> <span id="day6">{{fri}} </span> </td>
+              <td> <input name="team_hours_submissions[project_weeks][{{id}}][hours_logs][fri]" /> </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="col-md-6">
+        <td>
+          <table>
+            <tr> <td colspan="2"> <div class="label label-default">Saturday</div> </td> </tr>
+            <tr>
+              <td class="col-md-6"> <span id="day7">{{sat}} </span> </td>
+              <td> <input name="team_hours_submissions[project_weeks][{{id}}][hours_logs][sat]" /> </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+  {{/project_weeks}}

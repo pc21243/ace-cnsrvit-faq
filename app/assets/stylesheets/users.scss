@@ -1,0 +1,26 @@
+//= require iCheck/custom.css
+//= require dataTables/datatables.min.css
+
+//= require jqGrid/ui.jqgrid.css
+//= require footable/footable.core.css
+//= require_self
+
+th.title {
+  min-width: 200px;
+}
+
+th.columntitle {
+  font-size: 12px;
+}
+
+.btn-delete {
+  color: #ed5565;
+}
+
+td.columntext {
+  font-size: 10px;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #d9d9d9;
+}

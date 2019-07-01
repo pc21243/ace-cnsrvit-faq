@@ -1,0 +1,120 @@
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+  border-radius: 5px;
+  font-family: "fontawesome";
+  content: '\f105';
+  background-color: #337ab7
+}
+
+table.dataTable td.child table { width: 100%;}
+
+
+.status-bar {
+    // background-color: rgba(28,132,198,0.51);
+    background-color: #ced7de;
+    // color: #ffffff;
+    border: 2px solid #9a9696;
+    border-radius:12px;
+    -moz-border-radius:12px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    vertical-align: top;
+    line-height: 2;
+    text-align: center;
+    border-style: hidden;
+    border-collapse: separate;
+    font-weight: 600;
+  }
+
+.status-bar th
+  .status-bar td {
+    border: 3px solid #ddd !important;
+  }
+
+.status-bar {
+  border-left: 1px solid #9a9696;
+}
+.status-bar > thead > tr > th,
+.status-bar > tbody > tr > th,
+.status-bar > tfoot > tr > th,
+.status-bar > thead > tr > td,
+.status-bar > tbody > tr > td,
+.status-bar > tfoot > tr > td {
+  border-left: 1px solid #9a9696;
+
+}
+.status-bar > thead > tr > th,
+.status-bar > thead > tr > td {
+  border-bottom-width: 2px;
+}
+
+.status-bar tr:first-child th {
+  border-top: 0;
+}
+.status-bar tr:last-child td {
+  border-bottom: 0;
+}
+.status-bar tr td:first-child,
+.status-bar tr th:first-child {
+  border-left: 0;
+}
+.status-bar tr td:last-child,
+.status-bar tr th:last-child {
+  border-right: 0;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+.nav-text-danger {
+  color: #F44336;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(256,256,256,0.2);
+  font-size: 12px;
+}
+
+.gridy {
+  display: grid;
+  grid-template-columns: 15vw 7vw 15vw 7vw;
+  grid-template-rows:10px 10px 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-right: 20px;
+}
+.agreement-label{
+  text-align: right;
+  font-weight: 600;
+}
+
+.agreement-value{
+  text-align: left;
+  padding-right: 20px;
+}
+
+.agreement-flex-item{
+  min-width: 100px;
+  flex-basis: auto;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+@media (max-width: 1200px) {
+  .gridy {
+    display: grid;
+    grid-template-columns: 20vw 50px 20vw 50px;
+    grid-template-rows:10px 10px 10px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .gridy {
+    grid-row-gap: 15px;
+  }
+}

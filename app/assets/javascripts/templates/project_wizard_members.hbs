@@ -1,0 +1,18 @@
+<div class="col-sm-12 member-input">
+  {{#project}}
+  <div class="form-group required project_member_id" aria-required="true">
+    <label class="control-label required" for="project_member_id" aria-required="true"><abbr title="required">*</abbr> Choose existing program members </label>
+    <small> Please start typing then names of the members that you wish to assign to this project. Then select the correct term from the list.</small>
+    <div class="clearfix"></div>
+    {{#members}}
+      <div class="col-sm-4 member-select">
+        <label><span class='fa fa-user'></span></label>
+        <input class="ta-member-select form-control" type='text' name="add_members_{{@index}}" >
+        <input class="hidden" id="add_members_{{@index}}" type='text' name="project[project_member_terms_attributes][{{@index}}][member_id]" value="" />
+        <input class="hidden" type='text' name="project[project_member_terms_attributes][{{@index}}][id]" value="{{id}}" />
+        <div class="hidden start-date-selector">{{start_date}}</div>
+      </div>
+    {{/members}}
+  </div>
+  {{/project}}
+</div>

@@ -1,0 +1,9 @@
+.notif
+  - flash.each do |type, content|
+    - if content.respond_to?('each')
+      - content.each do |item|
+        = render 'layouts/message_alert', type: type, content: item
+    - else
+      = render 'layouts/message_alert', type: type, content: content
+:javascript
+  removeAlert()

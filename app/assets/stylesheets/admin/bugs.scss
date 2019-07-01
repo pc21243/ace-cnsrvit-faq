@@ -1,0 +1,21 @@
+// Place all the styles related to the Admin::Bugs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//= require dataTables/datatables.min.css
+//= require select2/select2.min
+//= require chosen/bootstrap-chosen
+
+
+.bug-update hr { margin-top: 5px; margin-bottom: 5px; border: 0; border-top: 1px solid #eeeeee;}
+
+table.dataTable tbody tr td {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.yadcf-filter-wrapper button { border: none;}
+.yadcf-filter { color: 797878; background: #fff; font-weight: normal;}
+.yadcf-filter-range-date.yadcf-filter-range { border: none; }
+.ui-menu.ui-widget.ui-widget-content.ui-autocomplete { 
+  background: blue;
+
+}

@@ -1,0 +1,62 @@
+<div class="col-md-12">
+  <h3>Select a Project/Pay Period</h3>
+  {{#projects}}
+  <div class="col-md-6">
+    <div class="z-depth-2" style="border-radius: 5px 5px 5px 5px;">
+      <a href="#" data-params = ['project_id'] data-data-type = 'script' data-fetch-url = "/timesheets/fetch_project_data" data-parent-el = "#timesheet-data" data-template = "timesheets_project_entry" data-object-name = "project" data-pw-ids="{{#project_week_list}}{{project_week_id}},{{/project_week_list}}" class="pj-selector project-{{id}}">
+        <div class="hoverable">
+          <div class="{{color_box}} p-lg text-center text-white widget-head-color-box">
+            <div class="inline-block">
+              <div class="m-b-md">
+                <h2 class="font-bold no-margins" style="height: 6.5rem; overflow: hidden;">
+                  {{title}}
+                </h2>
+                <h4>
+                  {{project_number}}
+                </h4>
+              </div>
+            </div>
+            <div>
+              <span class="badge badge-{{timesheet_status_badge}}" id="status_badge" data-badge-label="data-badge-{{timesheet_status_badge}}">{{timesheet_status}}</span>
+              |
+              <span>
+                {{hours}} Total Hours
+              </span>
+            </div>
+            <div>
+              <span>
+                {{#pay_periods}}{{start_at}} - {{end_at}}{{/pay_periods}}
+              </span>
+            </div>
+          </div>
+        </div>
+        </a>
+        <div class="widget-text-box">
+        {{#project_week_list as | project_week| }}
+        <div class="col-sm-6">
+          <div class='col-sm-4'> </div>
+          <div class='col-sm-4'></div>
+          <div class='col-sm-4'></div>
+        </div>
+        <dl class="dl-horizontal">
+          <div class="col-md-9">
+            <dt>Week {{inc @index}}:</dt>
+            <dd>{{project_week_start}} - {{project_week_end}} </dd>
+            <dt>Week Hours:</dt>
+            <dd>{{week_hours}}</dd>
+            <dt>Members:</dt>
+            <dd>{{week_members}}</dd>
+            {{#if_eq project_week_action_button 'approval'}}
+            <dt>Action:</dt>
+            <dd><a href="{{../project_week_action_link}}" class="btn btn-xs btn-default">Approve</a> </dd>
+            {{/if_eq}}
+          </div>
+        </dl>
+        <div class="clearfix"></div>
+        <hr>
+        {{/project_week_list}}
+      </div>
+    </div>
+  </div>
+  {{/projects}}
+</div>

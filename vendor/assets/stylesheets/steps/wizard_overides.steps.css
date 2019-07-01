@@ -1,0 +1,13 @@
+/*
+    Common
+*/
+
+.wizard > .content > .body input
+{
+    display: block;
+    border: 1px solid #e5e6e7;;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    background-image: none;
+
+}

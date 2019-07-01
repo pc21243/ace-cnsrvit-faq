@@ -1,0 +1,41 @@
+//= require toastr/toastr.min.css
+//= require jvectormap/jquery-jvectormap-2.0.2.css
+//= require morris/morris-0.4.3.min.css
+
+
+
+// .member-dashboad-header {
+//   min-height: 280px;
+// }
+
+.staff-dashboard-header {
+  min-height: 350px;
+}
+
+.partner-dashboard-header {
+  min-height: 350px;
+}
+
+.widget-list{
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  display: block;
+}
+
+.ac-element img{
+  height: 80px;
+  width: 80px;
+  border: solid 2px white;
+  background: white;
+  margin: 5px;
+}
+
+.text-white {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+
+}
+
+.project-lead.p-lg {
+    padding: 15px;
+}

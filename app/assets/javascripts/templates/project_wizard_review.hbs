@@ -1,0 +1,58 @@
+<div class="col-sm-12 review">
+  {{#project}}
+    <p>
+      Is this information correct? If it looks correct, press "Finish".
+    </p>
+    <div class="col-sm-12">
+      <dl class="dl-horizontal">
+        <dt>Agreement:</dt>
+        <dd> {{agreement}}</dd>
+      </dl>
+    </div>
+    <div class="col-sm-6">
+      <dl class="dl-horizontal">
+        <dt>Program:</dt>
+        <dd> {{program}}</dd>
+        <dt>Division:</dt>
+        <dd> {{division}}</dd>
+        <dt>Partner:</dt>
+        <dd> {{partner}}</dd>
+        <dt>Project Number:</dt>
+        <dd> {{project_number}} </dd>
+      </dl>
+    </div>
+    <div class="col-sm-6">
+      <dl class="dl-horizontal">
+        <dt>Title:</dt>
+        <dd> {{title}} </dd>
+        <dt>Start Date:</dt>
+        <dd> {{start_date}} </dd>
+        <dt>End Date:</dt>
+        <dd> {{end_date}} </dd>
+        <dt>Description:</dt>
+        <dd> {{project_description}} </dd>
+      </dl>
+    </div>
+    {{#if_eq billing_type "org"}}
+      <div class="col-sm-4">
+        <dl class="dl-horizontal">
+          <dt>Unit Type:</dt>
+          <dd> {{default_invoice_unit}} </dd>
+          <dt>Crew Leader Rate:</dt>
+          <dd> {{default_leader_rate}} </dd>
+          <dt>Member Rate::</dt>
+          <dd> {{default_member_rate}} </dd>
+          <dt>Match Rate:</dt>
+          <dd> {{default_match_rate}} </dd>
+        </dl>
+      </div>
+    {{/if_eq}}
+    <div class="clearfix"></div>
+    {{#members}}
+      <div class="col-sm-3 vspace">
+        <span class='fa fa-user'></span>
+        <span>{{member}}</span>
+      </div>
+    {{/members}}
+  {{/project}}
+</div>

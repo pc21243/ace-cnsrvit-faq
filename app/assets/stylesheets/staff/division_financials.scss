@@ -1,0 +1,23 @@
+// Place all the styles related to the expenses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//= require dataTables/datatables.min.css
+//= require jqGrid/ui.jqgrid.css
+//= require footable/footable.core.css
+//= require_self
+
+.checkmark {
+  color:#148F76;
+}
+
+.well-totals {
+    // color: rgba(0,0,0,0.42);
+    min-height: 20px;
+    padding: 18px;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.9);
+    border: 3px double #e2e2e2;
+    border-radius: 4px;
+    -webkit-box-shadow: 1px 1px 18px rgba(256, 256, 256, 0.5);
+    box-shadow: 1px 1px 18px rgba(256, 256, 256, 0.5);
+}

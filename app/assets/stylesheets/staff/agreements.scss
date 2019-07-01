@@ -1,0 +1,111 @@
+// Place all the styles related to the Certifications controller here.
+//= require dataTables/datatables.min.css
+//= require base/tables.css
+//= require_self
+
+th.title {
+  min-width: 200px;
+}
+
+th.aceid {
+  min-width: 90px;
+}
+
+.btn-delete {
+  color: #ed5565;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #d9d9d9;
+}
+
+.contact-popover.btn{
+  padding: 0;
+}
+
+.popover{
+  max-width: 100%;
+}
+
+th.buttons {
+  min-width: 130px;
+}
+
+.ibox-title h5{
+  line-height: 30px;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+  border-radius: 5px;
+  font-family: "fontawesome";
+  content: '\f105';
+  background-color: #337ab7
+}
+
+table.dataTable td.child table { width: 100%;}
+
+
+// .status-bar {
+//     border: 0;
+//     background-color: #1c84c6;
+//     color: #ffffff;
+//     border-radius:12px;
+//     -moz-border-radius:12px;
+//     width: 100%;
+//     max-width: 100%;
+//     margin-bottom: 20px;
+//     vertical-align: top;
+//     line-height: 2;
+//     text-align: center;
+//     border-style: hidden;
+//     border-collapse: separate;
+//   }
+//
+// .status-bar th
+//   .status-bar td {
+//     border: 3px solid #ddd !important;
+//   }
+//
+// .status-bar {
+//   border-left: 1px solid #dddddd;
+// }
+// .status-bar > thead > tr > th,
+// .status-bar > tbody > tr > th,
+// .status-bar > tfoot > tr > th,
+// .status-bar > thead > tr > td,
+// .status-bar > tbody > tr > td,
+// .status-bar > tfoot > tr > td {
+//   border-left: 1px solid #dddddd;
+//
+// }
+// .status-bar > thead > tr > th,
+// .status-bar > thead > tr > td {
+//   border-bottom-width: 2px;
+// }
+//
+// .status-bar tr:first-child th {
+//   border-top: 0;
+// }
+// .status-bar tr:last-child td {
+//   border-bottom: 0;
+// }
+// .status-bar tr td:first-child,
+// .status-bar tr th:first-child {
+//   border-left: 0;
+// }
+// .status-bar tr td:last-child,
+// .status-bar tr th:last-child {
+//   border-right: 0;
+// }
+//
+// table tr:last-child td:first-child {
+//     border-bottom-left-radius: 12px;
+// }
+//
+// table tr:last-child td:last-child {
+//     border-bottom-right-radius: 12px;
+// }
+//
+// .status-bar-title{
+//   color: lighten(#1c84c6, 40%);
+// }

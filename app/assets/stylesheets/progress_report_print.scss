@@ -1,0 +1,210 @@
+.print_area {
+  background-color: black !important;
+}
+
+.white-bg.page-heading {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
+
+#page-wrapper {
+  margin: 10px !important;
+}
+
+.navbar-default.navbar-static-side {
+  display: none !important;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.invoice-logo-image img {
+  width: 80px;
+  height: 80px;
+  margin: 15px;
+}
+
+.text-navy.status {
+  display: none;
+}
+
+#status_badge {
+  display: none;
+}
+
+#header {
+  display: none;
+}
+
+.the-annoyingly-large-font{
+  font-size: 2em;
+  font-weight: 600;
+  // font-family: "Lato" ,"open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 h2 h3 h4 h5 h6 h6 p {
+  font-family: "Slabo 27px", serif;
+}
+
+.master-agreement-number {
+  margin-top: 83px;
+}
+
+.invoiced-date {
+  margin-top: 15px;
+}
+
+%p {
+  font-size: 1em;
+}
+
+.hide-for-print {
+  display: none !important;
+}
+
+.show-for-print {
+  display: block !important;
+}
+
+body {
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #2f4050;
+  font-size: 12px;
+  color: #676a6c;
+  overflow-x: hidden;
+}
+
+.signature-box p {
+  margin-top: 2px;
+  font-size: 1em;
+  font-weight: 600px;
+}
+
+.century-logo {
+  margin: 30px;
+  height: 30px;
+  width: 125px;
+}
+
+.address {
+  margin: 30px;
+}
+
+.ibox {
+  margin: -45px;
+  border: none;
+}
+
+.ibox-content {
+  border: none;
+}
+
+.dl-horizontal {
+  margin: 0px !important;
+}
+
+.signature img{
+  width: 200px;
+  height: auto;
+}
+
+.hr-line-dashy {
+  margin: 5px  0px !important;
+  border-top: 2px solid #8c8b8b;
+}
+
+.sign{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align: center;
+    align-items: baseline;
+}
+
+.signature-box{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+
+h4 {
+  margin: 5px;
+}
+
+
+.table.invoice-project-table.service th {
+  border: none;
+}
+
+.text-box {
+  min-width: 200px;
+  border: 1px solid #222;
+  display: inline-block;
+  margin-left: 25px;
+  min-height: 25px;
+  padding: 5px;
+}
+
+.question-area {
+  margin: 10px 0px !important;
+}
+
+.written-response-area {
+  display: block;
+  min-height: 100px;
+}
+
+.big-response-area {
+  display: block;
+  min-height: 250px;
+}
+
+.pr-header {
+  height: 140px;
+}
+
+.section-title {
+  margin-bottom: 2px;
+  padding-bottom: 0px;
+}
+
+.no-v-margin {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+.yes-or-no {
+  margin-left: 30px
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+   align-items: baseline;
+}
+
+// ol {
+//   list-style: none;
+//   counter-reset: my-awesome-counter;
+// }
+// ol li {
+//   counter-increment: my-awesome-counter;
+// }
+// ol li::before {
+//   content: counter(my-awesome-counter) ". ";
+//   font-weight: bold;
+//   text-align: top;
+// }

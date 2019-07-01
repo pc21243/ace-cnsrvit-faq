@@ -1,0 +1,10 @@
+//= require choices/choices.css
+//= require dataTables/datatables.min.css
+
+.payroll-member-select {width: 275px !important}
+.widget-box { display: inline-block; width: 31%; min-width: 275px; margin: 5px; border-radius: 8px 8px 8px 8px; text-align: center; background-color: white; border: 2px solid #b3b3b3}
+.choices {margin: 0px}
+.flex-box {display: flex; align-items: stretch; justify-content: space-evenly; align-items: stretch; flex-wrap: wrap}
+.demog {max-width: 300px}
+.widget-box.payroll-member-box { display: inline-block; width: 45%; margin: 5px; padding: 5px; border-radius: 8px 8px 8px 8px; border: 2px solid #b3b3b3}
+.widget-box.payroll-member-box .widget-head-color-box {color: #fff}

@@ -1,0 +1,19 @@
+// Place all the styles related to the Members::Profile controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//= require dataTables/datatables.min.css
+
+
+td.details-control {
+    background-image: url('assets/user-icon.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background-image: url('../../assets/images/rails.png') no-repeat center center;
+
+}
+
+
+.project-drop-down {
+  margin-left: 100px;
+}

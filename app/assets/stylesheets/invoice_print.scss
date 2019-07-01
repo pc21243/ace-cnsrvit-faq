@@ -1,0 +1,195 @@
+#print-header {
+  display: block !important;
+}
+
+
+.print_area {
+  background-color: black !important;
+}
+
+.white-bg.page-heading {
+  display: none;
+}
+
+
+#agreement-navbar {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
+
+#page-wrapper {
+  margin: 10px !important;
+}
+
+#comments {
+  display: none;
+}
+.navbar-default.navbar-static-side {
+  display: none !important;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.invoice-logo-image img {
+  width: 80px;
+  height: 80px;
+  margin: 15px;
+}
+
+.text-navy.status {
+  display: none;
+}
+
+#status_badge {
+  display: none;
+}
+
+#header {
+  display: none;
+}
+
+.the-annoyingly-large-font{
+  font-size: 3.5em;
+  font-weight: 600;
+  font-family: "Lato" ,"open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.master-agreement-number {
+  margin-top: 30px;
+}
+
+.term-due-on-receipt {
+  margin-top: 20px;
+}
+
+.invoiced-date {
+  margin-top: 15px;
+}
+
+%p {
+  font-size: 1em;
+}
+
+.hide-for-print {
+  display: none !important;
+}
+
+.show-for-print {
+  display: block !important;
+}
+
+body {
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #2f4050;
+  font-size: 12px;
+  color: #676a6c;
+  overflow-x: hidden;
+}
+
+.signature-box p {
+  margin-top: 2px;
+  font-size: 1em;
+  font-weight: 600px;
+}
+
+.century-logo {
+  margin: 30px;
+  height: 30px;
+  width: 125px;
+}
+
+.invoice-address-footer {
+  display: flex;
+  margin: 30px;
+}
+
+.address {
+  margin: 10px;
+  border: solid 1px #ccc;
+  padding: 10px;
+}
+
+.ibox {
+  margin: -45px;
+  border: none;
+}
+
+.ibox-content {
+  border: none;
+}
+
+.row.border-bottom.z-depth-1 {
+  border: none;
+}
+
+.table td {
+  padding: 3px !important;
+}
+
+.hr-line-dashy {
+  margin: 5px  0px !important;
+  border-top: 2px solid #8c8b8b;
+}
+
+.dl-horizontal {
+  margin: 0px !important;
+}
+
+.signature img{
+  width: 100px;
+  height: auto;
+}
+
+.sign{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align: center;
+    align-items: baseline;
+}
+
+.signature-box{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 40px;
+}
+
+.sign div:last-child {
+  margin-left: auto;
+}
+
+.table.invoice-total {
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin: 5px;
+}
+
+
+.invoice-item-btns {
+  display: none;
+}
+
+.table.invoice-total {
+  margin-bottom: 2px;
+}
+
+.table-responsive.m-t {
+  margin-top: 5px;
+}
+
+.table.invoice-project-table.service th {
+  border: none;
+}

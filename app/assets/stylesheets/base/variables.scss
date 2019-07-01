@@ -1,0 +1,57 @@
+// #59c9c9 -> ACE ACE acent color
+// #36454f -> charcoal grey
+// #751108 -> ACE red
+
+// ACE colors
+$ace-red: #751108; //#751108;    // ACE's red color
+$ace-accent: #59c9c9; // ACE's bluish accent
+$ace-dark-blue: #001642; //ACE's dark blue
+$ace-navy: #2f5597; //ACE navy accent color
+
+// Basic Colors
+// $navy: $ace-accent;//old color -> #1ab394;       // Primary color
+$primary: #3B6697;  //materialize color -> #3f51b5; // old-color -> #3B6697;
+$dark-gray: #c2c2c2;  // Default color
+$blue: #009688; // old color -> #148F76;       // Success color This is actaully green
+$lazur: #23c6c8;      // Info color #23c6c8 -> old color #00bcd4 -> materialize
+$yellow: #ffc107; // old -> #f8ac59;     // Warning color #ffc107 -> materialize
+$red: #F44336; // old => #ED5565;        // Danger color
+$navy: $primary;//old color -> #1ab394;       // Primary color
+
+// Various colors
+$text-color: #676a6c;   // Body text
+$gray: #dadadb; //#F6F9FE; // old color ->#f3f3f4;         // Background wrapper color
+$light-gray: #36454f;   // Default label, badge
+$label-badge-color: #5E5E5E;
+$light-blue: #f3f6fb;
+
+// Spinner color and margin
+$spin-color: $navy;
+$spin-margin: 0 auto;
+
+
+// IBOX colors ( default panel colors)
+$border-color: #effefe; //#e7eaec;     // IBox border
+$ibox-title-bg:#ffffff;     // IBox Background header
+$ibox-content-bg:#ffffff;   // IBox Background content
+
+//Sidebar width
+$sidebar-width: 220px;
+
+// Boxed layout width
+$boxed-width: 1200px;
+$boxed-background: image-url('patterns/shattered.png');
+
+//Border radius for buttons
+$btn-border-radius: 3px;
+
+//Navigation
+$nav-bg: #2F4050;
+$nav-profile-pattern: image-url("patterns/header-profile-red.png");
+$nav-text-color: lighten($ace-red, 75%); //#a7b1c2;
+
+//this sets side menubar color. I couldn't find the other spot
+//so I added a new class.
+.nav-ace {
+  background: $ace-red;
+}

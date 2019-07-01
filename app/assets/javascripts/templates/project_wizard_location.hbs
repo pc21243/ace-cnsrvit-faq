@@ -1,0 +1,13 @@
+<div class="col-sm-6 location-input">
+  {{#project}}
+    <div class="form-group required project_location_id_field" aria-required="true">
+      <label class="control-label required" for="project_location_id" aria-required="true"><abbr title="required">*</abbr> Site  / Assignment Location </label>
+      <select class="form-control grouped_select required valid" required="required" aria-required="true" name="project[location_id]" id="project_location_id" aria-invalid="false">
+        {{#locations}}
+          <option value={{id}}>{{code}} - {{name}}</option>
+        {{/locations}}
+      </select>
+    </div>
+    <div class="form-groupproject_id"><input class="form-control hidden" type="hidden" step="any" name="project[id]" id="project_id" value={{id}}></div>
+  {{/project}}
+</div>

@@ -1,0 +1,29 @@
+// Place all the styles related to the Members::Terms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@media (min-width: 520px) {
+  .dl-horizontal.setting-width dt {
+    float: left;
+    clear: left;
+    width: 220px;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 875px) {
+  .dl-horizontal.setting-width dt {
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 20px;
+  }
+}
