@@ -26,10 +26,19 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'bootstrap-sass', '~> 3.3.7'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
+gem 'x-editable-rails'
+
+gem 'jquery-rails'
+
+gem 'popper_js'
+
+gem 'cocoon'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -52,13 +61,14 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '~> 3.0.0'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
 
-  gem 'haml', '~> 2.0'
+gem 'haml', git: "https://github.com/haml/haml.git"
+gem 'haml-rails'
 
   gem 'font-awesome-rails', '4.7.0.4'
 

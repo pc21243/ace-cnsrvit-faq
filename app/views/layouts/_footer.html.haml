@@ -1,0 +1,10 @@
+f signed_in?
+  .footer.z-depth-1
+    .row
+      .pull-right
+        = link_to new_bug_path(fu: request.original_url) , title: "Submit an error to CnsrvIt Admins", remote: true, "data-modal" => true,  class: "text-muted" do
+          %i.fa.fa-bug
+          %span Problem with Cnsrv.it?
+      %div
+        %strong Copyright
+        ="American Conservation Experience © #{DateTime.now.year}"
