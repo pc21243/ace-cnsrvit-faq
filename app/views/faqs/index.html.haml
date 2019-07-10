@@ -1,0 +1,5 @@
+%ul
+  - @allQuestions.each do |question|
+    %li
+      = question.content
+      = link_to  "#{question.active ? "Delete" : "Recover"}", faq_path(question), method: :delete

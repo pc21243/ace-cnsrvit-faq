@@ -1,0 +1,17 @@
+- case type.to_sym
+- when :alert, :danger, :error, :validation_errors, :warning
+  - alert = 'alert-danger'
+- when :warning, :todo
+  - alert = 'alert-warning'
+- when :notice, :success
+  - alert = 'alert-success'
+- else
+  - alert = 'alert-info'
+
+%div{class:"alert #{alert} alert-dismissible z-depth-1", role: "alert"}
+  %button{type:"button", class:"close", "data-dismiss"=>"alert"}
+    %span{"aria-hidden"=>"true"}
+      x
+    %span.sr-only
+      Close
+  = content.try(:html_safe)
