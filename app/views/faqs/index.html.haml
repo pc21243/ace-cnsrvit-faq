@@ -1,5 +1,17 @@
 %ul
-  - @allQuestions.each do |question|
+  - if current_user
+    - if current_user.admin
+      - @questions = @all_questions
+    - else
+      - @questions = @empty_questions
+  - @questions.each do |question|
     %li
       = question.content
-      = link_to  "#{question.active ? "Delete" : "Recover"}", faq_path(question), method: :delete
+      - if current_user.admin
+        =link_to faq_path(question), method: :put do
+          - if question.active
+            = "Delete"
+            %i.fa.fa-trash
+          - else
+            = "Recover"
+            %i.fa.fa-medkit

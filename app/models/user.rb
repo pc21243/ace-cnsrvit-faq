@@ -5,7 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   enum role: {member: 0, admin: 1}
-
-  def admin
-  end
 end
