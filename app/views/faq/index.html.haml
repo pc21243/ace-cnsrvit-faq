@@ -1,3 +1,11 @@
 %ul
   - @questions.each do |question|
-    %li= question.content? ? question.content : "No content: "
+    %li
+      %h2 Hi
+      -if question.content?
+        = question.content
+      - if current_user ? current_user.admin? : false
+        = link_to 'Delete', question_path(question, question: {status: question.active? ? "created" : "deleted"}), method: :put
+    - if current_user ? true : false
+      %li
+        = question.content? ? question.content : "No content."
