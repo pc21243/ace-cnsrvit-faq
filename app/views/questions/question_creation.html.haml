@@ -1,0 +1,12 @@
+- if true #current_user
+
+  = simple_form_for question_creation_path(@question) do |f|
+    = f.input :title
+    = f.input :content
+    = f.submit "Confirm"
+
+
+
+  = link_to index_path do
+    %i.fa.fa-home
+    = "Home"

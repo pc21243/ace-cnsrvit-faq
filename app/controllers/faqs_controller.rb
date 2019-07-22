@@ -22,6 +22,7 @@ class FaqsController < ApplicationController
 
   end
 
+
   def question_params
     params.require( :question ).permit( :name, :active )
   end
@@ -31,7 +32,7 @@ class FaqsController < ApplicationController
     @questions = Question.content.active
     @empty_questions = Question.active
     @all_questions = Question.all
-    
+
   end
 
 end

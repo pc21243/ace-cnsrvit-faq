@@ -4,14 +4,18 @@
       - @questions = @all_questions
     - else
       - @questions = @empty_questions
-  - @questions.each do |question|
+      %h3 Currently set to: Empty questions
+  - @all_questions.each do |question|
     %li
       = question.content
-      - if current_user.admin
-        =link_to faq_path(question), method: :put do
+      - if true #current_user && current_user.admin
+        = link_to faq_path(question), method: :put do
           - if question.active
             = "Delete"
             %i.fa.fa-trash
           - else
             = "Recover"
             %i.fa.fa-medkit
+
+- if true #current_user
+  = link_to "Create a Question:", question_creation_path
